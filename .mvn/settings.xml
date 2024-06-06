@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+	    <server>
+		<id>apus-central</id>
+		<username>viewer</username>
+		<password>onlyview</password>
+		</server>
+	     <server>
+            <id>tripi-central</id>
+            <username>viewer</username>
+            <password>onlyview</password>
+        </server>
+        <server>
+            <id>afs-central</id>
+            <username>viewer</username>
+            <password>onlyview</password>
+        </server>
+         <server>
+            <id>admin</id>
+            <username>admin</username>
+            <password>app@2020!</password>
+        </server>
+        <server>
+            <id>nexus-snapshot</id>
+            <username>admin</username>
+            <password>app@2020!</password>
+        </server>
+        <server>
+            <id>nexus-release</id>
+            <username>admin</username>
+            <password>app@2020!</password>
+        </server>
+        <server>
+            <id>viettel-central</id>
+            <username>admin</username>
+            <password>app@2020!</password>
+        </server>
+        <server>
+            <id>central</id>
+            <username>admin</username>
+            <password>app@2020!</password>
+        </server>
+    </servers>
+<mirrors>
+        <mirror>
+            <id>maven-default-http-blocker</id>
+            <mirrorOf>external:dummy:*</mirrorOf>
+            <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+            <url>http://0.0.0.0/</url>
+            <blocked>true</blocked>
+        </mirror>
+    </mirrors>
+ 
+  
+</settings>
