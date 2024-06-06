@@ -5,7 +5,6 @@ import com.example.book_management.app.dto.book.BookRequest;
 import com.example.book_management.core.domain.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import org.springframework.stereotype.Service;
 
 @Mapper
 public interface BookMapper {
@@ -13,5 +12,4 @@ public interface BookMapper {
     Book toBook(BookRequest bookRequest);    // BookRequest sang Book
     BookRequest toBookRequest(BookRepo bookRepo);  //  BookRepo sang BookRequest
     void updateBook(@MappingTarget Book book, BookRequest bookRequest);  // Cập nhật Book từ BookRequest
-
 }

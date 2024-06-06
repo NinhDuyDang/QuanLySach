@@ -1,4 +1,4 @@
-package com.example.book_management.core.sevice;
+package com.example.book_management.core.service;
 
 import com.example.book_management.app.api.BooksApi;
 import com.example.book_management.app.dto.book.BookRepo;
@@ -6,7 +6,9 @@ import com.example.book_management.app.dto.book.BookRequest;
 import com.example.book_management.core.domain.entity.Book;
 import com.example.book_management.core.port.mapper.BookMapper;
 import com.example.book_management.core.port.repository.BookRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,9 +17,11 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class BookService implements BooksApi {
-    BookRepository bookRepository;
-    BookMapper bookMapper;
+@Transactional
+public class BookService implements BooksApi { // BookService b = new (null, bookMapper)
+    final BookRepository bookRepository;
+
+    final   BookMapper bookMapper;
 
     @Override
     public List<BookRepo> getAllBooks() {

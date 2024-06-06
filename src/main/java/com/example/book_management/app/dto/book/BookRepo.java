@@ -12,6 +12,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 public class BookRepo {
+    private Integer bookId;
 
     private String title;
 

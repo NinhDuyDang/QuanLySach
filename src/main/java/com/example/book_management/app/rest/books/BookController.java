@@ -1,7 +1,6 @@
 package com.example.book_management.app.rest.books;
 import com.example.book_management.app.api.BooksApi;
 import com.example.book_management.app.dto.book.BookRepo;
-import com.example.book_management.core.sevice.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
