@@ -32,8 +32,6 @@ public class BookController {
     public BookRepo createBook(@RequestBody BookRepo bookRepo) {
         return bookService.createBook(bookRepo);
     }
-
-
     @Operation(summary = "update book")
     @PutMapping("/update/{id}")
     public BookRepo updateBook(@PathVariable("id") int id, @RequestBody BookRepo bookRepo) {
