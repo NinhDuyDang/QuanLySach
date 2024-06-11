@@ -8,9 +8,8 @@ import com.example.book_management.core.port.mapper.BookMapper;
 import com.example.book_management.core.port.repository.BookRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -19,9 +18,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Transactional
 public class BookService implements BooksApi { // BookService b = new (null, bookMapper)
-    final BookRepository bookRepository;
-
-    final   BookMapper bookMapper;
+   private final BookRepository bookRepository;
+   private final   BookMapper bookMapper;
 
     @Override
     public List<BookRepo> getAllBooks() {
@@ -53,8 +51,6 @@ public class BookService implements BooksApi { // BookService b = new (null, boo
         }
         return null;
     }
-
-
     @Override
     public BookRepo delete(int id) {
         Optional<Book> bookToDelete = bookRepository.getBookById(id);

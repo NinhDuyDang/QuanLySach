@@ -11,7 +11,7 @@ import java.util.Optional;
 @RequestMapping("api/v1/book")
 @RequiredArgsConstructor(onConstructor_ = {@Autowired})
 public class BookController {
- private  final BooksApi bookService;
+     private  final BooksApi bookService;
 
     @Operation(summary = "get list")
     @GetMapping("/list")
