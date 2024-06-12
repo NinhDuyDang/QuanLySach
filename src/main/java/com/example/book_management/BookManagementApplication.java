@@ -1,5 +1,6 @@
 package com.example.book_management;
 
+import com.example.book_management.core.port.mapper.BookMapper;
 import com.example.book_management.core.port.mapper.EmployeeMapper;
 import org.mapstruct.factory.Mappers;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +18,10 @@ public class BookManagementApplication {
 	@Bean
 	public EmployeeMapper employeeMapper() {
 		return Mappers.getMapper(EmployeeMapper.class);
+	}
+	@Bean
+	public BookMapper bookMapper() {
+		return Mappers.getMapper(BookMapper.class);
 	}
 
 }
