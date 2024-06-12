@@ -6,7 +6,7 @@ import com.example.book_management.core.domain.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface BookMapper {
     BookRepo toBookRepo(Book book);          //  Book sang BookRepo
     Book toBook(BookRequest bookRequest);    // BookRequest sang Book
